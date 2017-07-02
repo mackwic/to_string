@@ -1,5 +1,9 @@
 # to\_string
 
+See the [Documentation](https://docs.rs/to_string).
+
+Pairs well with the [colored](https://github.com/mackwic/colored) crate.
+
 ```rust
 0xdeadbeef.to_hexa_string()
 0b10101.to_bin_string()
