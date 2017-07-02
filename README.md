@@ -21,4 +21,18 @@ Provided methods:
 - to\_pointer() / to\_pointer\_string()
 - to\_debug() / to\_debug\_string()
 
+# How to use
+
+Add this in your Cargo.toml:
+
+```toml
+[dependencies]
+to_string = "0.1"
+```
+and add this to your lib.rs or main.rs:
+
+```rust
+    extern crate to_string;
+    use to_string::*;
+```
 
