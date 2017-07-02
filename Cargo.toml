@@ -2,5 +2,13 @@
 name = "to_string"
 version = "0.1.0"
 authors = ["Thomas Wickham <twickham@octo.com>"]
+description = "Simple functions to print primitives as strings"
+documentation = "https://docs.rs/to_string"
+repository = "https://github.com/mackwic/to_string"
+homepage = "https://github.com/mackwic/to_string"
+license = "MPL-2.0"
+readme = "README.md"
+keywords = ["string", "to_string", "primitives", "display", "debug"]
+categories = ["value-formatting", "visualization", "development-tools"]
 
 [dependencies]
