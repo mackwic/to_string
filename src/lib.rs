@@ -16,12 +16,12 @@ use std::fmt::{Debug, Binary, LowerHex, Octal, LowerExp, Pointer};
 pub trait BinaryDisplay {
     /// ```
     /// use to_string::BinaryDisplay;
-    /// assert_eq!("0b0", 0.to_binary_string())
+    /// assert_eq!("0b0", 0.to_binary_string());
     /// ```
     fn to_binary_string(&self) -> String;
     /// ```
     /// use to_string::BinaryDisplay;
-    /// assert_eq!("0b0", 0.to_bin())
+    /// assert_eq!("0b0", 0.to_bin());
     /// ```
     fn to_bin(&self) -> String { self.to_binary_string() }
 }
@@ -36,13 +36,14 @@ pub trait HexaDisplay {
     /// ```
     /// use to_string::HexaDisplay;
     /// assert_eq!("0x12", 0x12.to_hexa_string());
-    /// assert_eq!("0xffffffee", (-0x12).to_hexa_string())
+    /// assert_eq!("0xffffffee", (-0x12).to_hexa_string());
     /// ```
     fn to_hexa_string(&self) -> String;
     /// ```
     /// use to_string::HexaDisplay;
     /// assert_eq!("0x12", 0x12.to_hexa());
-    /// assert_eq!("0xffffffee", (-0x12).to_hexa())
+    /// assert_eq!("0xffffffee", (-0x12).to_hexa());
+    /// assert_eq!("[0xfa, 0xfb, 0xfc]", [0xfa, 0xfb, 0xfc].to_hexa());
     /// ```
     fn to_hexa(&self) -> String { self.to_hexa_string() }
 }
@@ -56,12 +57,12 @@ impl<T : LowerHex> HexaDisplay for T {
 pub trait OctalDisplay {
     /// ```
     /// use to_string::OctalDisplay;
-    /// assert_eq!("0o12", 0o12.to_octal_string())
+    /// assert_eq!("0o12", 0o12.to_octal_string());
     /// ```
     fn to_octal_string(&self) -> String;
     /// ```
     /// use to_string::OctalDisplay;
-    /// assert_eq!("0o12", 0o12.to_octal())
+    /// assert_eq!("0o12", 0o12.to_octal());
     /// ```
     fn to_octal(&self) -> String { self.to_octal_string() }
 
@@ -76,12 +77,12 @@ impl<T : Octal> OctalDisplay for T {
 pub trait ExpDisplay {
     /// ```
     /// use to_string::ExpDisplay;
-    /// assert_eq!("4.21e1", (42.1).to_exp_string())
+    /// assert_eq!("4.21e1", (42.1).to_exp_string());
     /// ```
     fn to_exp_string(&self) -> String;
     /// ```
     /// use to_string::ExpDisplay;
-    /// assert_eq!("4.21e1", (42.1).to_exp())
+    /// assert_eq!("4.21e1", (42.1).to_exp());
     /// ```
     fn to_exp(&self) -> String { self.to_exp_string() }
 }
@@ -116,12 +117,12 @@ impl<T : Pointer> PointerDisplay for T {
 pub trait DebugDisplay {
     /// ```
     /// use to_string::DebugDisplay;
-    /// assert_eq!("12", 12.to_debug_string())
+    /// assert_eq!("12", 12.to_debug_string());
     /// ```
     fn to_debug_string(&self) -> String;
     /// ```
     /// use to_string::DebugDisplay;
-    /// assert_eq!("12", 12.to_debug_string())
+    /// assert_eq!("12", 12.to_debug_string());
     /// ```
     fn to_debug(&self) -> String { self.to_debug_string() }
 }
